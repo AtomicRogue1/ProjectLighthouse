@@ -40,4 +40,13 @@ public class HopePower2 : MonoBehaviour
             gameObject.layer=7;
         }
     }
+
+    // void OnTriggerEnter2D(Collider2D col)
+    // {
+    // }
+
+    // void OnTriggerExit2D(Collider2D col)
+    // {
+
+    // }
 }
