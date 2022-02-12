@@ -16,11 +16,9 @@ public class DespairPower : MonoBehaviour
     {
         if(DespairActivated)
         {
-            Debug.Log("Activated");
+            DespairActivated=false;
             Invoke("BackToVisible",5f);
-        }    
-        else
-        Debug.Log("Deactivated");
+        }
     }
 
     void BackToVisible()
