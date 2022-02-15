@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
 {
-    Vector2 moveDir=Vector2.right;
-    public bool test;
+    [Header("For Jump Mechanics:")]
+    [SerializeField]
+    float jumpCooldownTime;
     [SerializeField]
     Transform groundDetector1;
     [SerializeField]
     Transform groundDetector2;
-    
-    [SerializeField]
-    float smoothTime;
     [SerializeField]
     float JumpVelocity;
+
     [SerializeField]
+    float smoothTime;
+    
+    [SerializeField]
+
+    [Header("For Movement Mechanics:")]
     float moveSpeed;
+    Vector2 moveDir=Vector2.right;
     SpriteRenderer sr;
     Rigidbody2D rb2d;
     Animator anim;
@@ -24,6 +29,7 @@ public class MainCharacter : MonoBehaviour
     [Header("Debug Stuff:")]
     [SerializeField] bool debugGroundDetector=false;
     [SerializeField] bool debugWallDetector=false;
+    public bool hasJumped;
 
     bool isGrounded()
     {
@@ -31,7 +37,6 @@ public class MainCharacter : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position,-Vector2.up,distFromGround, LayerMask.GetMask("Ground"));
         float distFromGround2=Mathf.Abs(transform.position.y-groundDetector2.position.y);
         RaycastHit2D hit2 = Physics2D.Raycast(transform.position,-Vector2.up,distFromGround2, LayerMask.GetMask("Ground"));
-        test=hit.collider || hit2.collider;
         return hit.collider || hit2.collider;
     }
 
@@ -46,18 +51,14 @@ public class MainCharacter : MonoBehaviour
         Debug.DrawRay(transform.position, moveDir, Color.blue);
     }
 
-    void Start()
-    {
-        anim=GetComponent<Animator>();
-        rb2d=GetComponent<Rigidbody2D>();
-        sr=GetComponent<SpriteRenderer>();
-    }
 
     void Animations()
     {
+        //To make a jump animation
+
         if(isGrounded())
         {
-        if(Input.GetKey("right")||Input.GetKey("left"))
+        if(rb2d.velocity.x!=0 && isGrounded())
         anim.Play("Run");
         else
         anim.Play("Idle");
@@ -68,12 +69,18 @@ public class MainCharacter : MonoBehaviour
         else if(Input.GetKey("left"))
         sr.flipX=true;
     }
+    void JumpCooldown()
+    {
+        hasJumped=false;
+    }
 
     void Jump()
     {
-        if(isGrounded() && Input.GetKey("space"))
+        if(isGrounded() && Input.GetKey("space") && !hasJumped)
         {
-        rb2d.velocity+=Vector2.up*JumpVelocity;
+            hasJumped=true;
+            rb2d.velocity+=Vector2.up*JumpVelocity;
+            Invoke("JumpCooldown",jumpCooldownTime);
         }
     }
 
@@ -84,7 +91,18 @@ public class MainCharacter : MonoBehaviour
         else if(Input.GetKey("left"))
         rb2d.velocity=new Vector2(-moveSpeed,rb2d.velocity.y);
         else
-        rb2d.AddForce(Vector2.zero);
+        {
+            float yVelocity=0f;
+            float decreasingVelocity = Mathf.SmoothDamp(rb2d.velocity.x, 0, ref yVelocity, smoothTime);
+            rb2d.velocity=new Vector2(decreasingVelocity,rb2d.velocity.y);
+        };
+    }
+
+    void Start()
+    {
+        anim=GetComponent<Animator>();
+        rb2d=GetComponent<Rigidbody2D>();
+        sr=GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -98,20 +116,4 @@ public class MainCharacter : MonoBehaviour
         Move();
         DebugStuff();
     }
-
 }
-
-
-
-
-    //Notes for Future Games        
-    //Move Code (If you want to change direction on hitting wall)
-    // if(isWall())
-    // {
-    //     moveDir*=-1;
-    //     right=-right;
-    // }
-    // if(right==1)
-    // rb2d.velocity=new Vector2(moveSpeed,rb2d.velocity.y);
-    // else
-    // rb2d.velocity=new Vector2(-moveSpeed,rb2d.velocity.y);

@@ -6,8 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ToGame : MonoBehaviour
 {
+    GameObject LoadCanvas=GameObject.Find("LoadCanvas");
+    GameObject CurrentCanvas=GameObject.Find("CurrentCanvas");
     // [SerializeField]
     // Image LoadingScreen;
+    public void LoadLevel()
+    {
+        CurrentCanvas.SetActive(false);
+        LoadCanvas.SetActive(true);
+        Invoke("Play",1f);
+    }
     public void Play()
     {
         SceneManager.LoadScene("Lobby");
