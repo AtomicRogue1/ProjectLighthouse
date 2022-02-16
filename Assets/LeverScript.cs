@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class LeverScript : MonoBehaviour
 {
+    [SerializeField]
+    ConsequenceCam ConCam;
     bool isActivated=false;
     [SerializeField]
     GameObject toChange;
     Animator anim;
+    BoxCollider2D triggerArea;
     // Start is called before the first frame update
     void Start()
     {
-        anim=GetComponent<Animator>();        
+        anim=GetComponent<Animator>();    
+        triggerArea=GetComponent<BoxCollider2D>();    
     }
 
     void Update()
@@ -20,6 +24,8 @@ public class LeverScript : MonoBehaviour
         {
             isActivated=false;
             toChange.SetActive(false);
+            ConCam.ActivateCinematic=true;
+            triggerArea.enabled=false;
         }
     }
 

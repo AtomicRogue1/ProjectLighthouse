@@ -54,20 +54,20 @@ public class MainCharacter : MonoBehaviour
 
     void Animations()
     {
-        //To make a jump animation
-
         if(isGrounded())
         {
-        if(rb2d.velocity.x!=0 && isGrounded())
+        if(!Mathf.Approximately(rb2d.velocity.x,0f))
         anim.Play("Run");
         else
         anim.Play("Idle");
         }
-
-        if(Input.GetKey("right"))
-        sr.flipX=false;
-        else if(Input.GetKey("left"))
-        sr.flipX=true;
+        else
+        {
+            if(rb2d.velocity.y>0)
+            anim.Play("JumpBeginning");
+            else
+            anim.Play("JumpEnding");
+        }
     }
     void JumpCooldown()
     {
@@ -108,6 +108,10 @@ public class MainCharacter : MonoBehaviour
     void Update()
     {
         Animations();
+        if(Input.GetKey("right"))
+        sr.flipX=false;
+        else if(Input.GetKey("left"))
+        sr.flipX=true;
     }
 
     void FixedUpdate()
