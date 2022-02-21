@@ -6,9 +6,7 @@ public class LeverScript : MonoBehaviour
 {
     [SerializeField]
     ConsequenceCam ConCam;
-    bool isActivated=false;
-    [SerializeField]
-    GameObject toChange;
+    public bool isActivated=false;
     Animator anim;
     BoxCollider2D triggerArea;
     // Start is called before the first frame update
@@ -23,7 +21,6 @@ public class LeverScript : MonoBehaviour
         if(isActivated)
         {
             isActivated=false;
-            toChange.SetActive(false);
             ConCam.ActivateCinematic=true;
             triggerArea.enabled=false;
         }

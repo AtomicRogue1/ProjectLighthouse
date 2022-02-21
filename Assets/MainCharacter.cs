@@ -56,10 +56,10 @@ public class MainCharacter : MonoBehaviour
     {
         if(isGrounded())
         {
-        if(!Mathf.Approximately(rb2d.velocity.x,0f))
-        anim.Play("Run");
-        else
-        anim.Play("Idle");
+            if(!Mathf.Approximately(rb2d.velocity.x,0f))
+            anim.Play("Run");
+            else
+            anim.Play("Idle");
         }
         else
         {

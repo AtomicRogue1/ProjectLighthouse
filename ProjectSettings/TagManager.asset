@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HopeTile
   - PowerField
+  - Lever
   layers:
   - Default
   - TransparentFX

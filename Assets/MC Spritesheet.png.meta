@@ -35,6 +35,15 @@ TextureImporter:
   - first:
       213: -3060274562469007676
     second: MC Spritesheet_10
+  - first:
+      213: -3797276080233691149
+    second: MC Spritesheet_11
+  - first:
+      213: 2434584625563481559
+    second: MC Spritesheet_12
+  - first:
+      213: 6525106594203371623
+    second: MC Spritesheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -333,7 +342,7 @@ TextureImporter:
         width: 40
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,7 +363,7 @@ TextureImporter:
         width: 52
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,6 +371,69 @@ TextureImporter:
       bones: []
       spriteID: 4ceeedcdf78b785d0800000000000000
       internalID: -3060274562469007676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 12
+        width: 33
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7459b168d5d4bc0800000000000000
+      internalID: -3797276080233691149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 12
+        width: 35
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5b65661d169c120800000000000000
+      internalID: 2434584625563481559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 12
+        width: 33
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7680d0d30e5dd8a50800000000000000
+      internalID: 6525106594203371623
       vertices: []
       indices: 
       edges: []
