@@ -20,7 +20,7 @@ public class MainCharacter : MonoBehaviour
     [SerializeField]
 
     [Header("For Movement Mechanics:")]
-    float moveSpeed;
+    public float moveSpeed;
     Vector2 moveDir=Vector2.right;
     SpriteRenderer sr;
     Rigidbody2D rb2d;

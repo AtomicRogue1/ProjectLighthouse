@@ -21,6 +21,7 @@ public class LeverScript : MonoBehaviour
         if(isActivated)
         {
             isActivated=false;
+            if(ConCam)
             ConCam.ActivateCinematic=true;
             triggerArea.enabled=false;
         }
