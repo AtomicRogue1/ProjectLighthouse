@@ -8,6 +8,7 @@ TagManager:
   - PowerField
   - Lever
   - changeDir
+  - Ladder
   layers:
   - Default
   - TransparentFX
