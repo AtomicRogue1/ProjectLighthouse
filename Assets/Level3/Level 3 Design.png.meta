@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: -6156195087667215299
     second: Level 3 Design_4
+  - first:
+      213: 8355189730417963694
+    second: Level 3 Design_5
+  - first:
+      213: 1766454747078352983
+    second: Level 3 Design_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -216,7 +222,7 @@ TextureImporter:
         width: 576
         height: 319
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,6 +230,48 @@ TextureImporter:
       bones: []
       spriteID: d3447974f2dc09aa0800000000000000
       internalID: -6156195087667215299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level 3 Design_5
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 778
+        width: 472
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2fd88cac893f370800000000000000
+      internalID: 8355189730417963694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level 3 Design_6
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 754
+        width: 750
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750686fbb35b38810800000000000000
+      internalID: 1766454747078352983
       vertices: []
       indices: 
       edges: []

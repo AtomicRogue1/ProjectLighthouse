@@ -8,6 +8,8 @@ public class ConsequenceCam : MonoBehaviour
     [SerializeField]
     float duration;
     [SerializeField]
+    float destroyCamIn;
+    [SerializeField]
     GameObject consequenceCam;
     [SerializeField]
     GameObject currentCam;
@@ -31,13 +33,23 @@ public class ConsequenceCam : MonoBehaviour
     {
         anim.Play("SequenceOver");
         ActivateCinematic=false;
+        Destroy(gameObject,destroyCamIn);
+        Destroy(consequenceCam,destroyCamIn);
     }
 
     void Update()
     {
         PlayCinematic();
-        consequenceCam.SetActive(ActivateCinematic);
-        currentCam.SetActive(!ActivateCinematic);
+        if(ActivateCinematic)
+        {
+        consequenceCam.SetActive(true);
+        currentCam.SetActive(false);
+        }
+        else
+        {
+        consequenceCam.SetActive(false);
+        currentCam.SetActive(true);
+        }
     }
 
 }

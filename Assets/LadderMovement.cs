@@ -11,15 +11,12 @@ public class LadderMovement : MonoBehaviour
     bool isClimbing;
     [SerializeField]
     Rigidbody2D rb2d;
-    [SerializeField]
-    Transform HopeField;
 
     void Update()
     {
         vertical=Input.GetAxis("Vertical");
         if(isLadder && Mathf.Abs(vertical)>0f)
         isClimbing=true;
-        Physics2D.IgnoreCollision(HopeField.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     void FixedUpdate()

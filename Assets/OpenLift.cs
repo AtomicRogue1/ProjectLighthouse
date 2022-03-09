@@ -15,7 +15,7 @@ public class OpenLift : MonoBehaviour
 
     void NextLevel()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("GiantBedroom");
     }
     void OnTriggerEnter2D(Collider2D col)
     {
