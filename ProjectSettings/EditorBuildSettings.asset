@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GiantBedroom.unity
     guid: cd55084c4b993b848ad618ad6cb35fa3
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 12e5ad4fcb0cbd844b82b3fb853e9245
   m_configObjects: {}

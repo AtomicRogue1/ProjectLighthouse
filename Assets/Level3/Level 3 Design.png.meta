@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 1766454747078352983
     second: Level 3 Design_6
+  - first:
+      213: -5445857983298489613
+    second: Level 3 Design_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -264,7 +267,7 @@ TextureImporter:
         width: 750
         height: 461
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,6 +275,27 @@ TextureImporter:
       bones: []
       spriteID: 750686fbb35b38810800000000000000
       internalID: 1766454747078352983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level 3 Design_7
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 953
+        width: 18
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b440840d6c64b0800000000000000
+      internalID: -5445857983298489613
       vertices: []
       indices: 
       edges: []
